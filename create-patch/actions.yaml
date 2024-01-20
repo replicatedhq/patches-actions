@@ -1,0 +1,26 @@
+name: 'Replicated create patch'
+description: 'Create a Replicated Patch'
+inputs:
+  aws-region:
+    description: 'AWS Region'
+    required: true
+    default: ''
+  aws-access-key-id:
+    description: 'AWS Access Key ID'
+    required: true
+    default: ''
+  aws-secret-key-id:
+    description: 'AWS Secret Key ID'
+    required: true
+  sqs-queue-url:
+    description: 'AWS SQS Queue URL'
+    required: true
+  branch-pending-patch:
+    description: 'Branch to use for pending patch'
+    required: true
+  patch-description:
+    description: 'Patch description'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
