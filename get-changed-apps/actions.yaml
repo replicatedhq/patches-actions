@@ -1,0 +1,5 @@
+name: 'Get changed apps'
+description: 'Given a workdir, list the app slugs that have changed from main'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
